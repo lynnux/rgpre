@@ -1,7 +1,6 @@
 ﻿extern crate encoding_rs;
 extern crate encoding_rs_io;
 
-#[link(name = "foo")]
 extern "C" {
     fn AutoDectUnicodeType(pBuffer: *const u8, cb: i32) -> i32;
 }
