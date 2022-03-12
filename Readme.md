@@ -1,4 +1,4 @@
-# rgpre #
+ï»¿# rgpre #
 
 A tool for `rg --pre`.
 
@@ -6,16 +6,16 @@ Read file to console, automatically recognize file encoding, include ansi, utf16
 
 Usage
 =====
-`rg --pre rgpre ÖÐÎÄ`
+`rg --pre rgpre ä¸­æ–‡`
 
 
-ÖÐÎÄËµÃ÷
+ä¸­æ–‡è¯´æ˜Ž
 =====
-rgÓÐ¸öÎÊÌâÊÇÖ»ÄÜ×Ô¶¯¸ù¾ÝbomÊ¶±ðutf-8,utf16µÈ£¬³ý´ËÖ®ÍâÈçgbk±àÂëµÄÎÄ¼þ£¬Ö»ÄÜÓÃ`rg -Egbk`À´ËÑË÷£¬Õâ¶àÉÙÓÐµã²»·½±ã¡£±¾¹¤¾ß¸ù¾ÝrgÌá¹©µÄ--pre²ÎÊýËµÃ÷±àÐ´¶ø³É£¬×Ô¶¯Ê¶±ðÎÄ¼þ±àÂë²¢°ÑÄÚÈÝÊä³öµ½console¹©rgËÑË÷£¬Ö§³Ö±àÂëÓÐansi£¬utf16le/be£¬utf8£¬Ä¿Ç°ansiÖ±½ÓÈÏÎªÊÇgbk±àÂëÒÔ·½±ãÖÐÎÄËÑË÷¡£²Î¿¼ÁËgrepwinºÍripgrepµÄÔ´Âë¡£
+rgæœ‰ä¸ªé—®é¢˜æ˜¯åªèƒ½è‡ªåŠ¨æ ¹æ®bomè¯†åˆ«utf-8,utf16ç­‰ï¼Œé™¤æ­¤ä¹‹å¤–å¦‚gbkç¼–ç çš„æ–‡ä»¶ï¼Œåªèƒ½ç”¨`rg -Egbk`æ¥æœç´¢ï¼Œè¿™å¤šå°‘æœ‰ç‚¹ä¸æ–¹ä¾¿ã€‚æœ¬å·¥å…·æ ¹æ®rgæä¾›çš„--preå‚æ•°è¯´æ˜Žç¼–å†™è€Œæˆï¼Œè‡ªåŠ¨è¯†åˆ«æ–‡ä»¶ç¼–ç å¹¶æŠŠå†…å®¹è¾“å‡ºåˆ°consoleä¾›rgæœç´¢ï¼Œæ”¯æŒç¼–ç æœ‰ansiï¼Œutf16le/beï¼Œutf8ï¼Œç›®å‰ansiç›´æŽ¥è®¤ä¸ºæ˜¯gbkç¼–ç ä»¥æ–¹ä¾¿ä¸­æ–‡æœç´¢ã€‚å‚è€ƒäº†grepwinå’Œripgrepçš„æºç ã€‚
 
-Êä³öµ½console»á¶ÔrgËÙ¶ÈÓÐÐ©Ó°Ïì£¬½¨ÒéÖ»ÔÚËÑË÷ÖÐÎÄÊ±Ê¹ÓÃ--pre²ÎÊý¡£
+è¾“å‡ºåˆ°consoleä¼šå¯¹rgé€Ÿåº¦æœ‰äº›å½±å“ï¼Œå»ºè®®åªåœ¨æœç´¢ä¸­æ–‡æ—¶ä½¿ç”¨--preå‚æ•°ã€‚
 
-emacs¿ÉÒÔÕâÑùÉèÖÃ£¬Ö»ÔÚËÑË÷ÖÐÎÄÊ±¿ªÆô`--pre rgpre`:
+emacså¯ä»¥è¿™æ ·è®¾ç½®ï¼Œåªåœ¨æœç´¢ä¸­æ–‡æ—¶å¼€å¯`--pre rgpre`:
 
 ```
 (defun chinese-char-p (char)
@@ -47,9 +47,9 @@ emacs¿ÉÒÔÕâÑùÉèÖÃ£¬Ö»ÔÚËÑË÷ÖÐÎÄÊ±¿ªÆô`--pre rgpre`:
 )
 ```
 
-µ÷ÊÔ
+è°ƒè¯•
 ----
-console´°¿Ú`rgpre file`¾Í¿ÉÒÔ¿´µ½Êä³ö¡£
+consoleçª—å£`rgpre file`å°±å¯ä»¥çœ‹åˆ°è¾“å‡ºã€‚
 
-## ¸ÐÐ» ##
-ripgrep, grepwin£¬rust£¬encoding_rs£¬they are all awesome!
+## æ„Ÿè°¢ ##
+ripgrep, grepwinï¼Œrustï¼Œencoding_rsï¼Œthey are all awesome!
