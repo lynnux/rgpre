@@ -15,7 +15,7 @@ rg有个问题是只能自动根据bom识别utf-8,utf16等，除此之外如gbk编码的文件，只能用`rg
 
 输出到console会对rg速度有些影响，建议只在搜索中文时使用--pre参数。
 
-emacs helm可以这样设置:
+emacs可以这样设置，只在搜索中文时开启`--pre rgpre`:
 
 ```
 (defun chinese-char-p (char)
