@@ -27,13 +27,27 @@ emacs可以这样设置，只在搜索中文时开启`--pre rgpre`:
   "Return t if STRING is a Chinese string."
   (cl-find-if 'chinese-char-p (string-to-list string)))
 
-;; consult-ripgrep
+;; consult-ripgrep老版本
 (defadvice consult--ripgrep-builder (around my-consult--ripgrep-builder activate)
              (if (chinese-word-chinese-string-p (ad-get-arg 0))
                  (let ((consult-ripgrep-args (concat consult-ripgrep-args " --pre rgpre")))
                    ad-do-it
                    )
                ad-do-it))
+
+;; consult-ripgrep新版本
+(define-advice consult--ripgrep-make-builder (:around (fn &rest args) fallback)
+      (let ((maker (apply fn args)))
+        (lambda (input)
+          (let ((result (funcall maker input)))
+            (when (chinese-word-chinese-string-p input)
+              (let ((cmds (car result)))
+                ;; 经测试不能包含--search-zip参数，不然搜索不到
+                (setq cmds (delete "--search-zip" cmds))
+                (setq result (append (list (append (list (car cmds)) (list "--pre" "rgpre") (cdr cmds)))
+                                     (cdr result)))))
+            result))))
+
 ;; helm
 (defadvice helm-grep-ag-prepare-cmd-line (around my-helm-grep-ag-prepare-cmd-line activate)
              (if (chinese-word-chinese-string-p (ad-get-arg 0))
